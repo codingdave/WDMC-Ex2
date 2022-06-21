@@ -25,10 +25,14 @@ patch -p1 < ../gpio_trigger.patch
 cp ../kernel.config .config
 ```
 
-## Copy prepared Device Tree for WD MyCloud Ex2 (armada-370) or Ex2 Ultra (armada-385)
+## Copy the required Device Tree
+### For WD MyCloud Ex2 (armada-370)
 ```
-cp ../armada-370-wdmc-mirror-gen1-gs.dts linux-stable/arch/arm/boot/dts/
-cp ../armada-385-wdmc-Ex2-Ultra.dts linux-stable/arch/arm/boot/dts/
+cp ../armada-370-wdmc-mirror-gen1-gs.dts arch/arm/boot/dts/
+```
+### For Ex2 Ultra (armada-385)
+```
+cp ../armada-385-wdmc-Ex2-Ultra.dts arch/arm/boot/dts/
 ```
 
 ## Start to compile the kernel 
