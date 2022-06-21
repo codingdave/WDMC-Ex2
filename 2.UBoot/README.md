@@ -2,14 +2,15 @@
 
 If you reach this part of the procedure, this is the funny part :smile:
 
-Uboot is the SW code executed by the chip in order to load the kernel.
-It is quite good utility, altough the documentation is not the best asset.
+Uboot is the firmware (software code) executed by the chip in order to load the kernel.
+It is a quite good utility, altough the documentation is not the best asset.
 You can find useful commands here: [Uboot User Manual](https://hub.digi.com/dp/path=/support/asset/u-boot-reference-manual/)
 
 ### Press `1`
 
-If you want to have access to the Uboot procedure, you shall keep the key `1` pressed during the boot sequence.
-If is important you check the reliability of the serial connection as describer in the [Section 1](../1.SerialCable/README.md)
+If you want to have access to the Uboot procedure, you shall keep the key `1` pressed during the boot sequence. If that does not work you can also short the Tx and Rx lines of the WDMC.
+
+It is important that you check the reliability of the serial connection as described in the [Section 1](../1.SerialCable/README.md)
 ```
 Enable HD1
 Enable HD2
@@ -99,7 +100,7 @@ Tuning:
 + bootcmd
 + bootargs
 
-Let's image you want to permanently load the image file `uimage` and `uinitrd` from your `sda1` and boot your preferred linus distribution from `sda2`.
+Let's imagine you want to permanently load the image file `uimage` and `uinitrd` from your `sda1` and boot your preferred linux distribution from `sda2`.
 Then you need to configure the variables in this way:
 ```
 Marvell>> printenv bootcmd bootargs
@@ -121,7 +122,7 @@ Erasing Nand...
 Writing to Nand... done
 Marvell>>
 ```
-For the kernel `uImage-v5.10.109gs` the `uinitrd` is not necessary (but you can still provide it to uboot) needed and you can tune as follow:
+For the kernel `uImage-v5.10.109gs` the `uinitrd` is not necessary (but you can still provide it to uboot) and you can tune as follows:
 ```
 Marvell>> setenv bootcmd ide reset \; ext2load ide 0:1 0x500000 /uImage-v5.10.109gs \; bootm 0x500000
 Marvell>> printenv bootcmd
