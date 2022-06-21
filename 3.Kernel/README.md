@@ -12,7 +12,7 @@ apt install crossbuild-essential-armhf
 
 ```
 cd WDMC-Ex2/3.Kernel
-git clone --depth 1 --branch v5.10.109 git://git.kernel.org/pub/scm/linux/kernel/git/stable/linux-stable.git linux-stable
+git clone --depth 1 --branch linux-rolling-stable git://git.kernel.org/pub/scm/linux/kernel/git/stable/linux-stable.git linux-stable
 ```
 
 Use patch to fix LED beheavor
