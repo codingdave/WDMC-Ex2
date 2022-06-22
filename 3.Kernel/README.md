@@ -8,6 +8,14 @@ apt install build-essential u-boot-tools libncurses5-dev git bison flex bc libss
 apt install crossbuild-essential-armhf
 ```
 
+## Get required files from this repository
+```
+wget https://raw.githubusercontent.com/codingdave/WDMC-Ex2/main/3.Kernel/gpio_trigger.patch
+wget https://raw.githubusercontent.com/codingdave/WDMC-Ex2/main/3.Kernel/kernel.config
+wget https://raw.githubusercontent.com/codingdave/WDMC-Ex2/main/3.Kernel/compile.sh
+wget https://raw.githubusercontent.com/codingdave/WDMC-Ex2/main/3.Kernel/armada-370-wdmc-mirror-gen1-gs.dts
+```
+
 ## Download the kernel sources and patch the led gpio file
 
 ```
