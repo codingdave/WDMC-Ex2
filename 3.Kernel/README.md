@@ -47,9 +47,9 @@ cp ../armada-385-wdmc-Ex2-Ultra.dts arch/arm/boot/dts/
 
 ### For WD MyCloud Ex2 (armada-370)
 ```
-make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- --jobs=4 zImage
-make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- --jobs=4 armada-370-wdmc-mirror-gen1-gs.dtb
-make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- --jobs=4 modules
+make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- -j zImage
+make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- -j armada-370-wdmc-mirror-gen1-gs.dtb
+make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- -j modules
 mkdir -p ../output
 make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- INSTALL_MOD_PATH=../output modules_install
 cp arch/arm/boot/zImage zImage_and_dtb
@@ -59,9 +59,9 @@ mkimage -A arm -O linux -T kernel -C none -a 0x00008000 -e 0x00008000 -n Kernel-
 
 ### For WD MyCloud Ex2 Ultra (armada-385)
 ```
-make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- --jobs=4 zImage
-make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- --jobs=4 armada-385-wdmc-Ex2-Ultra.dtb
-make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- --jobs=4 modules
+make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- -j zImage
+make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- -j armada-385-wdmc-Ex2-Ultra.dtb
+make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- -j modules
 mkdir -p ../output
 make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- INSTALL_MOD_PATH=../output modules_install
 cp arch/arm/boot/zImage zImage_and_dtb
