@@ -1,25 +1,26 @@
-# WD My Cloud Ex2 and EX2 Ultra with Debian Bullseye and OMV
+# WD MyCloud Ex2 (WD MyCloud-Mirror) and EX2 Ultra with Linux stable on Debian stable
 
-Codename: WDMC-Ex2 WDMC-Ex2 Ultra
+### Steps to update your Linux Kernel for WD MyCloud Ex2
 
-Repository: [github/gisab WDMC-Ex2](https://github.com/gisab/WDMC-Ex2)
+This Guide will explain you how to install Linux stable and Debian stable on your WD MyCloud Ex2.
+This procedure was tested with WD MyCloud Ex2, but it should work also for MyCloud Ex2 Ultra and the basic concepts of it can be applied to any WD Nas device.
 
-### Steps to update your Linux Kernel for WD My Cloud Ex2
+This repository contains the image file for kernel v5.18.5 (as it is linux-stable at the time of writing).
 
-This Guide will explain you how to update your WD MyCloud Ex2 Device to be able to install any modern OS.
-I tested this procedure with WD MyCloud Ex2, but can be adapted also for MyCloud Ex2 Ultra and (whith some abstraction guideline) to any WD Nas device.
+This guide works without flashing U-Boot.
 
-The repository contain the image file for kernel v5.10.109.
-
-There is no need to flash the native UBoot; you can load the new kernel on demand or by default keeping the original fw as it is, for safety and rollback procedure.
-
-The procedure is not disruptive; you don't need to backup your data.
+It allows for several ways to integrate the kernel:
+* Use the kernel (uImage) from /dev/mtdblock1 and the initrd/rootfs (uRamdisk) from /dev/mtdblock2 like WD has set their boxes up
+* Boot the kernel from /dev/sda
+* Boot the kernel from the usb drive
+* Boot the kernel via TFTP
 
 The procedure is articulated in these steps:
-1.  Get access to the serial log on your device (note: this will break the warranty, noting that the the Ex2 is officially no more supported by WD)
-2.  Prepare an HD/USB to store the bootable uImage file
-
-The repository contains the file ready-to-go with Linux 5.10.109; however there is a section (see 3.kernel) explaining how to compile the kernel with another version and for another WD device.
+1. Get access to the serial log on your device (note: this will break the warranty, noting that the the Ex2 is officially no more supported by WD. It can also easily brick your device if you are not careful.)
+2. Build the kernel. The repository contains the file ready-to-go with Linux 5.18.5 built for the WD MyCloud Ex2. If you have a different hardware you need to build the kernel for yourself (e.g. for Wd MyCloud Ex2 Ultra). 
+3. Install the kernel (Linux)
+4. Install debian (The operating system)
+5. Install userspace tools (applications on your NAS)
 
 ## Support
 + USB or SATA drive 
@@ -33,7 +34,7 @@ The repository contains the file ready-to-go with Linux 5.10.109; however there 
   https://wd.hides.su/wdnas.el8.website/WDMyCloud-Mirror/Developing/
 
 ## Credits:
-+ @FoxExe https://github.com/FoxExe/wdmc-gen1-tools.git
++ @FoxExe https://github.com/codingdave/wdmc-gen1-tools
 + @vzhilov https://github.com/vzhilov/WDMC-Ex2-Ultra.git
 + @Johns-Q https://github.com/Johns-Q/wdmc-gen2.git
 + @Heisath https://github.com/Heisath/wdmc2-kernel.git
