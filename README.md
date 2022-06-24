@@ -1,5 +1,20 @@
 # WD MyCloud Ex2 (WD MyCloud-Mirror) and EX2 Ultra with Linux stable on Debian stable
 
+# TODO
+- Explain: Why is it good to free the NAS
+- Explain: What is the kernel, what other names exist
+- Explain: What is the device tree and why do we need it
+- Explain: What is the Ramdisk, what other names exist
+- Explain: What is U-Boot and how does the ARM architecture work for that
+
+# Improvements
+- Automatically spin down the HDDs
+- Fix the leds (bring them their original behavior, mine is just blinking in blue)
+- Make the ramdisk more robust as it currently contains gparted --script code...
+- Fix the clock?
+- Other fixes
+
+
 ### Steps to update your Linux Kernel for WD MyCloud Ex2
 
 This Guide will explain you how to install Linux stable and Debian stable on your WD MyCloud Ex2.
