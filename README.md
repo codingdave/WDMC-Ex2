@@ -20,8 +20,8 @@ The procedure is articulated in these steps:
 2. Kernel: This repository contains the Linux stable (v5.18.5) built for the WD MyCloud Ex2 ready-to-go. If you have a different hardware you need to build it yourself (e.g. for Wd MyCloud Ex2 Ultra). 
 3. Ramdisk: build/change the initrd/rootfs (uRamdisk) if needed
 4. U-Boot: Test and install the kernel (and optionally the Ramdisk) into U-Boot
-5. Install debian (The operating system)
-6. Install userspace tools (applications on your NAS)
+5. OS: Install debian stable
+6. Applications: Install userspace tools
 
 ## Support
 + USB or SATA drive 
