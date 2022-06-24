@@ -23,7 +23,7 @@ The procedure is articulated in these steps:
 5. OS: Install debian stable
 6. Applications: Install userspace tools
 
-## Support
+## Features
 + USB or SATA drive 
 + ext2,3,4, btrfs
 + raid 0,1 and LVM
