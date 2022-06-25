@@ -25,3 +25,9 @@ A kernel alone does not bring you any value as you still need a shell to launch 
 
 # useful resources
 https://boundarydevices.com/hacking-ram-disks/
+https://www.mikrocontroller.net/topic/477429
+https://docs.windriver.com/bundle/Wind_River_Linux_Users_Guide_3.0_1/page/497733.html
+https://www.gibbard.me/linux_initramfs_initrd/
+https://yuhei1-horibe.medium.com/booting-linux-with-ramdisk-f6f2d59780dc
+https://armbedded.taskit.de/node/77
+https://linux-sunxi.org/Initial_Ramdisk
